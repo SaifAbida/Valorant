@@ -24,19 +24,20 @@ export class AgentControllers {
   @Post("/")
   async createAgent(@Body() agent: agentCreationType, @Res() res: Response) {
     const newAgent = await this.agentServices.createAgent(agent);
-    res.status(200).json(newAgent);
+    return res.status(200).json(newAgent);
   }
 
   @Get("/")
   async getAllAgents(@Req() req: Request, @Res() res: Response) {
-    const agents = await this.agentServices.getAgents();
-    res.status(200).json(agents);
+    const filters = req.query;
+    const agents = await this.agentServices.getAgents(filters);
+    return res.status(200).json(agents);
   }
 
   @Get("/:id")
   async getOneAgent(@Param("id") id: string, @Res() res: Response) {
     const agent = await this.agentServices.getAgent(id);
-    res.status(200).json(agent);
+    return res.status(200).json(agent);
   }
 
   @Put("/:id")
@@ -46,12 +47,12 @@ export class AgentControllers {
     @Res() res: Response
   ) {
     const updatedAgent = await this.agentServices.updateAgent(id, agent);
-    res.status(200).json(updatedAgent);
+    return res.status(200).json(updatedAgent);
   }
 
   @Delete("/:id")
   async deleteAgent(@Param("id") id: string, @Res() res: Response) {
     await this.agentServices.deleteAgent(id);
-    res.status(200).json({ message: "Agent Deleted successfully" });
+    return res.status(200).json({ message: "Agent Deleted successfully" });
   }
 }

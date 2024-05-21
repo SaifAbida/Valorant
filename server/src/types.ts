@@ -32,7 +32,7 @@ export type mapDocumentType = {
   mini_map: string;
   location: string;
   spike_sites: string;
-  added: Date;
+  added: string;
 };
 
 export type agentCreationType = {
@@ -64,5 +64,5 @@ export type mapCreationType = {
   mini_map: string;
   location: string;
   spike_sites: string;
-  added: Date;
+  added: string;
 };
