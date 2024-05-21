@@ -13,8 +13,8 @@ export class MapRepository implements MapInterface<mapDocumentType> {
   async getOne(id: string): Promise<mapDocumentType> {
     return await this.database.findById(id);
   }
-  async getAll(): Promise<mapDocumentType[]> {
-    return await this.database.find();
+  async getAll(fitlers: Partial<mapDocumentType> = {}): Promise<mapDocumentType[]> {
+    return await this.database.find(fitlers);
   }
   async update(id: string, map: mapCreationType): Promise<mapDocumentType> {
     return await this.database.findByIdAndUpdate(id, map, { new: true });

@@ -1,6 +1,6 @@
 import { AgentRepository } from "../repositories/AgentRepository";
 import { inject, injectable } from "inversify";
-import { agentCreationType } from "../types";
+import { agentCreationType, agentDocumentType } from "../types";
 import { NotFoundError } from "routing-controllers";
 
 @injectable()
@@ -21,8 +21,8 @@ export class AgentServices {
     return agent;
   }
 
-  async getAgents() {
-    return await this.agentRepository.getAll();
+  async getAgents(filters: Partial<agentDocumentType> = {}): Promise<agentDocumentType[]> {
+    return await this.agentRepository.getAll(filters);
   }
 
   async updateAgent(id: string, agent: agentCreationType) {

@@ -13,8 +13,8 @@ export class AgentRepository implements AgentInterface<agentDocumentType> {
   async getOne(id: string): Promise<agentDocumentType> {
     return await this.database.findById(id);
   }
-  async getAll(): Promise<agentDocumentType[]> {
-    return await this.database.find();
+  async getAll(filters: Partial<agentDocumentType> = {}): Promise<agentDocumentType[]> {
+    return await this.database.find(filters);
   }
   async update(
     id: string,

@@ -1,7 +1,7 @@
 import { WeaponRepository } from "../repositories/WeaponRepository";
 import { inject, injectable } from "inversify";
 import { NotFoundError } from "routing-controllers";
-import { weaponCreationType } from "../types";
+import { weaponCreationType, weaponDocumentType } from "../types";
 
 @injectable()
 export class WeaponServices {
@@ -14,8 +14,8 @@ export class WeaponServices {
     return await this.weaponRepository.create(weapon);
   }
 
-  async getWeapons() {
-    return await this.weaponRepository.getAll();
+  async getWeapons(filters : Partial<weaponDocumentType> = {}) {
+    return await this.weaponRepository.getAll(filters);
   }
 
   async getWeapon(id: string) {

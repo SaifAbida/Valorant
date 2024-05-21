@@ -13,8 +13,8 @@ export class WeaponRepository implements WeaponInterface<weaponDocumentType> {
   async getOne(id: string): Promise<weaponDocumentType> {
     return await this.database.findById(id);
   }
-  async getAll(): Promise<weaponDocumentType[]> {
-    return await this.database.find();
+  async getAll(filters : Partial<weaponDocumentType> = {}): Promise<weaponDocumentType[]> {
+    return await this.database.find(filters);
   }
   async update(
     id: string,

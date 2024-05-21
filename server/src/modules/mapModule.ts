@@ -8,7 +8,7 @@ const mapSchema = new mongoose.Schema({
     type: String,
     required: [true, "The map location is required"],
   },
-  added: { type: Date, required: [true, "The map creation date is required"] },
+  added: { type: String, required: [true, "The map creation date is required"] },
 });
 
 export const Map = mongoose.model("Map", mapSchema);

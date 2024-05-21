@@ -1,6 +1,6 @@
 import { MapRepository } from "../repositories/MapRepository";
 import { inject, injectable } from "inversify";
-import { mapCreationType } from "../types";
+import { mapCreationType, mapDocumentType } from "../types";
 import { NotFoundError } from "routing-controllers";
 
 @injectable()
@@ -13,8 +13,8 @@ export class MapServices {
     return await this.mapRepository.create(map);
   }
 
-  async getMaps() {
-    return await this.mapRepository.getAll();
+  async getMaps(fitlers: Partial<mapDocumentType> = {}) {
+    return await this.mapRepository.getAll(fitlers);
   }
 
   async getMap(id: string) {
