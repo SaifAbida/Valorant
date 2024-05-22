@@ -1,0 +1,27 @@
+.home-page {
+  background-image: url("../../assets/art-work.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  height: 89vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-page h1 {
+  font-family: "VALORANT", sans-serif;
+  font-size: 130px;
+  color: #fffbf5;
+  text-shadow: 2px 2px 30px rgba(0, 0, 0, 0.5);
+}
+
+.home-page h2 {
+  font-family: "Nunito", sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  color: #fffbf5;
+  text-shadow: 2px 2px 30px rgba(0, 0, 0, 0.5);
+  margin-bottom: 20px;
+}

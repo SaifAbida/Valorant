@@ -1,0 +1,18 @@
+.logo-img {
+  width: 40px;
+}
+
+.NavContainer {
+  background-color: #141414;
+  padding: 32px;
+}
+
+.nav-link {
+  margin-right: 15px;
+  color: white;
+  transition: color ease 0.5s;
+}
+
+.nav-link:hover {
+  color: #fa4454;
+}

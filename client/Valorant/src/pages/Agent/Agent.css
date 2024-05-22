@@ -1,0 +1,28 @@
+.agentContainer {
+    background-image: url("../../assets/art-work-webite.jpg");
+  width: 100vw;
+  height: 89vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.agent-img {
+  width: 800px;
+}
+
+.icon {
+  width: 40px;
+}
+
+.agent-name {
+  font-family: "Bebas Neue";
+  font-weight: bold;
+  font-size: 100px;
+}
+
+.agent-role {
+    font-family: "Bebas Neue";
+    font-weight: bold;
+    font-size: 50px; 
+}
