@@ -1,20 +1,20 @@
 import { useEffect, useState } from "react";
-import "./DuelistsPage.css";
-import { agentsDocumentType } from "../../types";
+import "./Rifles.css";
+import { weaponDocumentType } from "../../types";
 import axios, { AxiosResponse } from "axios";
-import DisplayCard from "../../components/DisplayCard/DisplayCard";
 import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
+import WeaponDisplayCard from "../../components/WeaponDisplayCard/WeaponDisplayCard";
 
-const DuelistsPage = () => {
-  const [agents, setAgents] = useState<agentsDocumentType[]>([]);
+const Rifles = () => {
+  const [weapons, setWeapons] = useState<weaponDocumentType[]>();
   const navigate = useNavigate();
 
   useEffect(() => {
     axios
-      .get("http://127.0.0.1:8080/agent?role.name=Duelist")
+      .get("http://127.0.0.1:8080/weapon?type=Rifle")
       .then((res: AxiosResponse) => {
-        setAgents(res.data);
+        setWeapons(res.data);
       })
       .catch(() => {
         Swal.fire({
@@ -27,13 +27,19 @@ const DuelistsPage = () => {
         navigate("/");
       });
   }, []);
+
   return (
-    <div className="controllers-container">
-      {agents.map((agent) => (
-        <DisplayCard key={agent._id} id={agent._id} name={agent.code_name} img={agent.image} />
+    <div className="weapons-container">
+      {weapons?.map((weapon) => (
+        <WeaponDisplayCard
+          key={weapon._id}
+          id={weapon._id}
+          name={weapon.name}
+          img={weapon.image}
+        />
       ))}
     </div>
   );
 };
 
-export default DuelistsPage;
+export default Rifles;

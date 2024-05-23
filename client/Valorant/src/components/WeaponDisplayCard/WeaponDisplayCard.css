@@ -1,0 +1,7 @@
+.cardImage:hover {
+  transform: scale(1.05);
+}
+
+.DisplayContainer {
+  margin: 50px;
+}

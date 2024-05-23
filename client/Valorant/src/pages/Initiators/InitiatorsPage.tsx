@@ -29,7 +29,7 @@ const InitiatorsPage = () => {
   return (
     <div className="controllers-container">
       {agents.map((agent) => (
-        <DisplayCard id={agent._id} name={agent.code_name} img={agent.image} />
+        <DisplayCard key={agent._id} id={agent._id} name={agent.code_name} img={agent.image} />
       ))}
     </div>
   );

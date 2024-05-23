@@ -20,6 +20,7 @@ const cardStyle = {
 const imgStyle = {
   height: "450px",
   transition: "all 0.3s",
+  marginBottom : "30px"
 };
 
 const CardComponent = ({ img, name }: CardProps) => {

@@ -1,8 +1,8 @@
 import "./Agents.css";
-import controller from "../../assets/controller.jpg";
-import duelist from "../../assets/Dueliest.jpg";
-import initator from "../../assets/initiator.png";
-import sentinal from "../../assets/sentinal.jpg";
+import controller from "../../assets/controller.webp";
+import duelist from "../../assets/Dueliest.webp";
+import initator from "../../assets/initiator.webp";
+import sentinal from "../../assets/sentinal.webp";
 import CardComponent from "../../components/Card/CardComponent";
 
 const Agents = () => {

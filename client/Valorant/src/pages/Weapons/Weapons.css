@@ -1,0 +1,12 @@
+.weapons-page {
+  background-image: url("../../assets/art-work-webite.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  height: 89vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}

@@ -22,3 +22,15 @@ export type agentsDocumentType = {
   signature_ability: { name: string; image: string };
   ultimate_ability: { name: string; image: string };
 };
+
+export type weaponDocumentType = {
+  _id: string;
+  name: string;
+  type: string;
+  image: string;
+  credits: number;
+  wall_Penetration: string;
+  magazine: number;
+  reserve: number;
+  damage: { distance: string; head: number; body: number; leg: number }[];
+};
