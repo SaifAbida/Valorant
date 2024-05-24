@@ -1,11 +1,9 @@
-.weapons-container {
-  background-color: #fffbf5;
+.maps-container {
+  background-color: #fa4454;
   width: 100vw;
-  height: 83%;
-  min-height: 83vh;
+  height: 89%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: 30px;
 }

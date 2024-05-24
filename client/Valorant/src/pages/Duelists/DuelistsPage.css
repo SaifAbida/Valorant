@@ -1,14 +1,9 @@
-body {
-    overflow-x: hidden;
-    background-color: #fffbf5;
-  }
-  
-  .controllers-container {
-    width: 100vw;
-    height: 89vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-  
+.controllers-container {
+  background-color: #fffbf5;
+  width: 100vw;
+  height: 89%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}

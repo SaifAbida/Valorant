@@ -1,53 +1,48 @@
-.agentContainer {
+.weaponContainer {
   background-color: #fa4454;
   color: #fffbf5;
   width: 100vw;
   height: 83%;
   min-height: 83vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 50px;
+  gap: 30px;
 }
 
-.agent-img {
+.weapon-img {
   width: 700px;
   background-color: #fffbf5;
-  padding-bottom: 50px;
+  padding: 70px;
   box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.5);
   transition: all 0.3s;
 }
 
-.agent-img:hover {
+.weapon-img:hover {
   transform: scale(1.05);
 }
 
-.icon {
-  width: 40px;
-}
-
-.agent-name {
+.weapon-name {
   font-family: "Bebas Neue";
   font-weight: bold;
   font-size: 100px;
-}
-
-.agent-description,
-.more-details {
-  font-family: "Bebas Neue";
-  font-weight: bold;
-  font-size: 50px;
-}
-
-.more-details {
-  margin-left: 30px;
-  max-width: 500px;
 }
 
 .headers {
   color: #141414;
 }
 
-.agent-info {
-  margin-left: 100px;
+.weapon-info {
+  font-family: "Bebas Neue";
+  font-weight: bold;
+  font-size: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 120px;
+}
+
+.weapon-details {
+  margin-left: 250px;
 }

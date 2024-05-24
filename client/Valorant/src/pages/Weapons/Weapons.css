@@ -1,9 +1,8 @@
 .weapons-page {
-  background-image: url("../../assets/art-work-webite.jpg");
-  background-size: cover;
-  background-position: center;
+  background-color: #fa4454;
   width: 100vw;
-  height: 89vh;
+  height: 83%;
+  min-height: 83vh;
   display: flex;
   justify-content: center;
   align-items: center;

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import "./WeaponCard.css";
 
 const headerStyte = {
-  color: "#fffbf5",
+  color: "#141414",
   fontFamily: "Bebas Neue",
   fontWeight: "bold",
   fontSize: "40px",
@@ -14,6 +14,7 @@ const cardStyle = {
   width: "500px",
   boxShadow: "2px 2px 30px rgba(0, 0, 0, 0.5)",
   cursor: "pointer",
+  backgroundColor: "#fffbf5"
 };
 
 const imgStyle = {
@@ -33,7 +34,7 @@ const WeaponCard = ({ img, name }: CardProps) => {
           className="cardImage"
         />
       </Link>
-      <Card.Body style={{ backgroundColor: "#fa4454" }}>
+      <Card.Body>
         <Card.Text style={{ ...headerStyte, textAlign: "center" }}>
           {name}
         </Card.Text>

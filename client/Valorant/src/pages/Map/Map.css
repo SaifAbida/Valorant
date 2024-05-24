@@ -1,4 +1,4 @@
-.agentContainer {
+.map-container {
   background-color: #fa4454;
   color: #fffbf5;
   width: 100vw;
@@ -7,47 +7,34 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 50px;
+  gap: 170px;
 }
 
-.agent-img {
+.map-img {
   width: 700px;
   background-color: #fffbf5;
-  padding-bottom: 50px;
   box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.5);
   transition: all 0.3s;
+  padding: 30px;
 }
 
-.agent-img:hover {
+.map-img:hover {
   transform: scale(1.05);
 }
 
-.icon {
-  width: 40px;
-}
-
-.agent-name {
+.map-name {
   font-family: "Bebas Neue";
   font-weight: bold;
   font-size: 100px;
-}
-
-.agent-description,
-.more-details {
-  font-family: "Bebas Neue";
-  font-weight: bold;
-  font-size: 50px;
-}
-
-.more-details {
-  margin-left: 30px;
-  max-width: 500px;
 }
 
 .headers {
   color: #141414;
 }
 
-.agent-info {
-  margin-left: 100px;
+.map-info {
+  font-family: "Bebas Neue";
+  font-weight: bold;
+  font-size: 50px;
+  max-width: 500px;
 }

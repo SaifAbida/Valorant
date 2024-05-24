@@ -1,8 +1,8 @@
 import { Card } from "@mui/material";
 import { CardContent, CardMedia, Typography } from "@mui/material";
-import { CardProps } from "../../types";
+import { CardDisplayProps } from "../../types";
 import { Link } from "react-router-dom";
-import "./CardComponent.css";
+import "./MapDisplayCard.css"
 
 const headerStyte = {
   color: "#fffbf5",
@@ -18,15 +18,14 @@ const cardStyle = {
 };
 
 const imgStyle = {
-  height: "450px",
+  height: "350px",
   transition: "all 0.3s",
-  marginBottom : "30px"
 };
 
-const CardComponent = ({ img, name }: CardProps) => {
+const MapDisplayCard = ({ img, name, id }: CardDisplayProps) => {
   return (
-    <Card style={cardStyle}>
-      <Link to={`/${name.toLowerCase()}`}>
+    <Card style={cardStyle} className="DisplayContainer">
+      <Link to={`/map/${id}`}>
         <CardMedia
           style={imgStyle}
           image={img}
@@ -49,4 +48,4 @@ const CardComponent = ({ img, name }: CardProps) => {
   );
 };
 
-export default CardComponent;
+export default MapDisplayCard;

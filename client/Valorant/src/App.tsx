@@ -14,6 +14,10 @@ import SMGs from "./pages/SMGs/SMGs";
 import Shotguns from "./pages/Shotguns/Shotguns";
 import Snipers from "./pages/Snipers/Snipers";
 import Machineguns from "./pages/Machineguns/Machineguns";
+import Weapon from "./pages/Weapon/Weapon";
+import Maps from "./pages/Maps/Maps";
+import Map from "./pages/Map/Map";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -33,8 +37,12 @@ function App() {
         <Route path="/shotguns" element={<Shotguns />} />
         <Route path="/sniper-rifles" element={<Snipers />} />
         <Route path="/machine-guns" element={<Machineguns />} />
+        <Route path="/maps" element={<Maps />} />
+        <Route path="/map/:id" element={<Map />} />
         <Route path="/agent/:id" element={<Agent />} />
+        <Route path="/weapon/:id" element={<Weapon />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 }

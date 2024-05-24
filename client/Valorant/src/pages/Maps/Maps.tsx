@@ -1,20 +1,20 @@
 import { useEffect, useState } from "react";
-import { agentsDocumentType } from "../../types";
+import "./Maps.css";
+import { mapDocumentType } from "../../types";
 import axios, { AxiosResponse } from "axios";
-import DisplayCard from "../../components/DisplayCard/DisplayCard";
 import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
-import "./ControllersPage.css";
+import MapDisplayCard from "../../components/MapDisplayCard/MapDisplayCard";
 
-const ControllersPage = () => {
-  const [agents, setAgents] = useState<agentsDocumentType[]>([]);
+const Maps = () => {
+  const [maps, setMaps] = useState<mapDocumentType[]>([]);
   const navigate = useNavigate();
 
   useEffect(() => {
     axios
-      .get("http://127.0.0.1:8080/agent?role.name=Controller")
+      .get("http://127.0.0.1:8080/map/")
       .then((res: AxiosResponse) => {
-        setAgents(res.data);
+        setMaps(res.data);
       })
       .catch(() => {
         Swal.fire({
@@ -27,18 +27,19 @@ const ControllersPage = () => {
         navigate("/");
       });
   }, []);
+
   return (
-    <div className="controllers-container">
-      {agents.map((agent) => (
-        <DisplayCard
-          key={agent._id}
-          id={agent._id}
-          name={agent.code_name}
-          img={agent.image}
+    <div className="maps-container">
+      {maps.map((map) => (
+        <MapDisplayCard
+          key={map._id}
+          id={map._id}
+          name={map.name}
+          img={map.image}
         />
       ))}
     </div>
   );
 };
 
-export default ControllersPage;
+export default Maps;

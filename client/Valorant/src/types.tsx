@@ -34,3 +34,13 @@ export type weaponDocumentType = {
   reserve: number;
   damage: { distance: string; head: number; body: number; leg: number }[];
 };
+
+export type mapDocumentType = {
+  _id: string;
+  name: string;
+  image: string;
+  mini_map: string;
+  location: string;
+  spike_sites: string;
+  added: string;
+};

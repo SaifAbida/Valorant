@@ -28,6 +28,7 @@ export type weaponDocumentType = {
 
 export type mapDocumentType = {
   _id: mongoose.Types.ObjectId;
+  image: string;
   name: string;
   mini_map: string;
   location: string;
@@ -61,6 +62,7 @@ export type weaponCreationType = {
 
 export type mapCreationType = {
   name: string;
+  image: string;
   mini_map: string;
   location: string;
   spike_sites: string;

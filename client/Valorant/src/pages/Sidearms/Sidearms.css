@@ -1,14 +1,11 @@
-body {
-  overflow-x: hidden;
-  background-color: #fffbf5;
-}
-
 .weapons-container {
+  background-color: #fffbf5;
   width: 100vw;
-  height: 89vh;
+  height: 83%;
+  min-height: 83vh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap : 30px;
+  gap: 30px;
 }
